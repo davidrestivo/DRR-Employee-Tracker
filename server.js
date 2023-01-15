@@ -8,7 +8,7 @@ const logo = require('asciiart-logo');
 // import your database module
 const config = require('./package.json');
 
-const { menu, department, role, employee, update } = require("./prompts");
+const { menu, department, role, employee, update } = require("./inputs");
 
 const db = mysql.createConnection({
   host: "127.0.0.1",
@@ -107,7 +107,7 @@ function init() {
 function art() {
   console.log(
     logo({
-      name: "Company DataBase",
+      name: "My Company DataBase",
       font: 'Soft',
       lineChars: 10,
       padding: 2,
