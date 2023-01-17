@@ -3,8 +3,6 @@ const inquirer = require("inquirer");
 const mysql = require("mysql2");
 const table = require("console.table");
 
-// Optional: import asciiart-logo
-const logo = require('asciiart-logo');
 // import your database module
 const config = require('./package.json');
 
@@ -31,7 +29,7 @@ function addDepartment() {
 // functon - Add a role
 function addRole() {
   inquirer.prompt(role).then((data) => {
-      db.query(`INSERT INTO roles ?`, data, (err, results) => {
+      db.query(`INSERT INTO roles SET ?`, data, (err, results) => {
           console.log(`${data.title} added to roles`);
           init();
       });
@@ -41,7 +39,7 @@ function addRole() {
 // function - Add a new employee
 function addEmployee() {
   inquirer.prompt(employee).then((data) => {
-      db.query(`INSERT INTO employees ?`, data, (err, results) => {
+      db.query(`INSERT INTO employees SET ?`, data, (err, results) => {
           console.log(`${data.first_name} ${data.last_name} added too employee list`);
           init();
       });
@@ -104,24 +102,24 @@ function init() {
       });
 }
 
-function art() {
-  console.log(
-    logo({
-      name: "My Company DataBase",
-      font: 'Soft',
-      lineChars: 10,
-      padding: 2,
-      margin: 3,
-      borderColor: 'grey',
-      logoColor: 'grey',
-      textColor: 'grey',
-    })
-    .emptyLine()
-    .right('version 1.0.0')
-    .render()
-  );
-}
-art();
+// function art() {
+//   console.log(
+//     logo({
+//       name: "My Company DataBase",
+//       font: 'Soft',
+//       lineChars: 10,
+//       padding: 2,
+//       margin: 3,
+//       borderColor: 'grey',
+//       logoColor: 'grey',
+//       textColor: 'grey',
+//     })
+//     .emptyLine()
+//     .right('version 1.0.0')
+//     .render()
+//   );
+// }
+// art();
 init();
 
 

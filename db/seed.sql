@@ -20,7 +20,7 @@ VALUES
     ("Manager", 110000, 3),
     ("Employee", 25000, 3),
     ("Manager", 105000, 4),
-    ("Employee", 30000, 4),
+    ("Employee", 30000, 4);
  
         
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
@@ -30,5 +30,5 @@ VALUES
     ('David', 'Copperfield', 3, NULL),
     ('Ron', 'White', 4, 3),
     ('Jerry', 'Carfield', 5, NULL),
-    ('Jose', 'Altuve', 6, 5),
+    ('Jose', 'Altuve', 6, 5);
   
