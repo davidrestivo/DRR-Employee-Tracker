@@ -11,3 +11,9 @@ Start by opening the local terminal and running node server.js. You will be prom
 
 ## Links
 
+https://github.com/davidrestivo/DRR-Employee-Tracker
+
+https://drive.google.com/file/d/18t95-Ji8_wvyFw1EhcxG6cfw3xXdBkBn/view
+
+
+

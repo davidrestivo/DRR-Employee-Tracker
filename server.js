@@ -82,7 +82,7 @@ function addEmployee() {
 function updateEmployee() {
     inquirer.prompt(update).then((data) => {
         db.query(
-            `UPDATE employee SET role = "${data.updateRole}" WHERE id = ${data.updateID};`, (err, results) => {
+            `UPDATE employee SET role_id = ${data.updateRole} WHERE id = ${data.updateID};`, (err, results) => {
                 console.log(`employee info up to date`);
                 init();
             });
@@ -132,7 +132,8 @@ function init() {
                     updateEmployee();
                 });
             } else {
-                return
+                // return
+                process.exit()
             }
         });
 }
