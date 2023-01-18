@@ -34,11 +34,6 @@ const inputs = {
         message: "Enter salary.",
         name: "salary",
       },
-      {
-        type: "input",
-        message: "Enter the department ID for the role.",
-        name: "department_id",
-      },
     ],
     employee: [
       {
